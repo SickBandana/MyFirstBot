@@ -34,7 +34,7 @@ client.on('message', async message => {
                 client.user.setUsername(newName);
                 message.channel.send('UserName del bot cambiato in ' + newName)
               } else {
-                message.channel.send('Errore durante l'esecuzione di tale comando. Controlla la console....');
+                message.channel.send('Errore durante l\'esecuzione di tale comando. Controlla la console....');
               }
           } else {
               message.author.sendMessage("Non hai il permesso di utilizzare questo comando");
