@@ -3,6 +3,10 @@
   "description": "A Discord bot coded in Discord.JS, hosted using Heroku.",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+    "node": "8.x",
+    "npm": "*"
+  },
   "scripts": {
     "start": "node index.js"
   },
