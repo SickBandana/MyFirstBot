@@ -17,6 +17,12 @@ client.on('message', async message => {
        message.channel.send('è una scimmia urlante'); 
      }
     
+    if(message.content ===cfg.prefix + 'ciao'){
+       message.delete(); 
+       message.author.send('hello'); 
+     }
+    
+    
 })
 
 client.login(process.env.BOT_TOKEN);
