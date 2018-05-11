@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const cfg = require('./config.json');
 
 client.on("ready", () => {
-    console.log("I am ready!");
+    console.log("Sono pronto!");
     client.user.setPresence({ game: { name: 'https://discord.gg/M53KjuE', type: 0 } });
 });
 
