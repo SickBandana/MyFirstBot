@@ -9,6 +9,12 @@ client.on("ready", () => {
 
 //comandi
 client.on('message', async message => {
+    const args = message.content.slice(cfg.prefix.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+    const newName = args.join(" ");
+    
+    let Admin = message.guild.roles.find("name","Admin");
+    
     if(message.content ===cfg.prefix + 'ping'){
        message.reply('pong!').then(msg => msg.delete(5000)); 
      }
@@ -22,7 +28,19 @@ client.on('message', async message => {
        message.author.send('hello'); 
      }
     
-    
+    if(command === 'nick') {
+          if(message.member.roles.has(Admin.id)) {
+              if(newName) {
+                client.user.setUsername(newName);
+                message.channel.send('UserName del bot cambiato in ' + newName)
+              } else {
+                message.channel.send('Errore durante l'esecuzione di tale comando. Controlla la console....');
+              }
+          } else {
+              message.author.sendMessage("Non hai il permesso di utilizzare questo comando");
+              message.delete();
+          }
+    }
 })
 
 client.login(process.env.BOT_TOKEN);
