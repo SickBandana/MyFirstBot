@@ -12,6 +12,11 @@ client.on('message', async message => {
     if(message.content ===cfg.prefix + 'ping'){
        message.reply('pong!'); 
      }
+    
+    if(message.content ===cfg.prefix + 'nano'){
+       message.channel.send('è una scimmia urlante'); 
+     }
+    
 })
 
 client.login(process.env.BOT_TOKEN);
