@@ -10,7 +10,7 @@ client.on("ready", () => {
 //comandi
 client.on('message', async message => {
     if(message.content ===cfg.prefix + 'ping'){
-       message.reply('pong!'); 
+       message.reply('pong!').then(msg => message.delete(5000)); 
      }
     
     if(message.content ===cfg.prefix + 'nano'){
