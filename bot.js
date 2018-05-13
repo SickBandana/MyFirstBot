@@ -41,11 +41,11 @@ client.on('message', async message => {
               message.delete();
           }
     }
+    const annuncio = args.join("  ");
     
     if(command = 'an'){
-      const annuncio = args.join("  ");
-        
-      message.channel.send (`${annuncio}`);  
+      
+    message.channel.send (`${annuncio}`);  
     }
 })
 
