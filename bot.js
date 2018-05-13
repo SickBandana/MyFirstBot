@@ -43,7 +43,7 @@ client.on('message', async message => {
     }
     const annuncio = args.join("  ");
     
-    if(command = 'an'){
+    if(command === 'an'){
       
     message.channel.send (`${annuncio}`);  
     }
