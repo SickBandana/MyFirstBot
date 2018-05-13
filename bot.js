@@ -41,7 +41,7 @@ client.on('message', async message => {
               message.delete();
           }
     }
-    const argomentfull = args.join("  ");
+    const argomentfull = args.join(" ");
     
     if(command === 'an'){
       
