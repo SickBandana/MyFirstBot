@@ -41,6 +41,12 @@ client.on('message', async message => {
               message.delete();
           }
     }
+    
+    if(command = 'an'){
+      const annuncio = args.join('  ');
+        
+      message.channel.send (`${annuncio}`);  
+    }
 })
 
 client.login(process.env.BOT_TOKEN);
