@@ -44,8 +44,10 @@ client.on('message', async message => {
     const argomentfull = args.join(" ");
     
     if(command === 'an'){
-      
-    message.channel.send (`${argomentfull}`);  
+    
+        message.delete();  
+    
+        message.channel.send (`${argomentfull}`);  
     }
 })
 
